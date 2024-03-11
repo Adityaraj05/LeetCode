@@ -13,6 +13,7 @@ Example 1:
 
 Input: head = [1,2,2,1]
 Output: true
+
 Example 2:
 
 ![image](https://github.com/Adityaraj05/LeetCode/assets/118068294/4e36e2ab-bd0b-410c-b15c-0130a8a76685)

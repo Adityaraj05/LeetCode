@@ -22,9 +22,11 @@ class Solution:
                 else:
                     # means equal to zero then add to the result
                     result.append([a,nums[left],nums[right]])
+                    left +=1
                     # checking the left is equal to left +1 then skip the left val and also chcking left don't cross right
                     while nums[left] == nums[left-1] and left < right:
                         left +=1
+                       
                     
         return result
 

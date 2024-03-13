@@ -14,13 +14,13 @@ class Solution:
             while left < right:
                 # calcualting the treesum
                 ThreeSum = nums[i] + nums[left] + nums[right]
+                 # if threesum is equal to target then simply return the target 
+                if ThreeSum == target:
+                    return target
                 # now checking if abs(threesum - target) is less than abs(result-target) that means threesum value is much closer to the target therefore we will update the result 
                 if abs(ThreeSum - target) < abs(result - target):
                     # now our result willbe updated
                     result = ThreeSum 
-                    # if threesum is equal to target then simply return the target 
-                if ThreeSum == target:
-                    return target
                     # if thressum is less than the target that mean we need higher value that's why we need increase left pointer by 1
                 elif ThreeSum  < target:
                     left += 1

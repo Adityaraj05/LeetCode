@@ -6,7 +6,9 @@ Given the head of a singly linked list and two integers left and right where lef
 
 Example 1:
 
-![Uploading image.png…]()
+
+![rev2ex2](https://github.com/Adityaraj05/LeetCode/assets/118068294/da94ad06-e561-4331-9609-c9258e84af16)
+
 
 
 

@@ -1,5 +1,6 @@
 class Solution:
     def smallestRepunitDivByK(self, k: int) -> int:
+        # even number cannot divide odd number
         if k % 2 == 0 or k % 5 == 0:
             return -1
         else:

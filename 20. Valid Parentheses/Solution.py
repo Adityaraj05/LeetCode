@@ -17,5 +17,33 @@ class Solution:
                 # If the current character brackets is not a closing bracket (i.e., it's an opening bracket), this line appends it to the stack, indicating that an opening bracket has been encountered.
                 stack.append(brackets)
         return True if not stack else False
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+# Using Stack:-
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        stack = []
+        for i in s:
+            if i == '(' or i == '[' or i == '{':
+                stack.append(i)
+            elif i == ')':
+                if stack and stack[-1] == '(':
+                    stack.pop()
+                else:
+                    return False
+            elif i == ']':
+                if stack and stack[-1] == '[':
+                    stack.pop()
+                else:
+                    return False
+            elif i == '}':
+                if stack and stack[-1] == '{':
+                    stack.pop()
+                else:
+                    return False
+        if not stack:
+            return True
+        else:
+            return False
         

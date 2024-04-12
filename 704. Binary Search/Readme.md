@@ -1,3 +1,4 @@
+
 Given a sorted array of n uniformly distributed values arr[], write a function to search for a particular element x in the array. 
 Linear Search finds the element in O(n) time, Jump Search takes O(? n) time and Binary Search takes O(log n) time. 
 The Interpolation Search is an improvement over Binary Search for instances, where the values in a sorted array are uniformly distributed. Interpolation constructs new data points within the range of a discrete set of known data points. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to different locations according to the value of the key being searched. For example, if the value of the key is closer to the last element, interpolation search is likely to start search toward the end side.
@@ -15,7 +16,7 @@ lo    ==> Starting index in arr[]
 
 hi    ==> Ending index in arr[]
 
-   ![image](https://github.com/Adityaraj05/LeetCode/assets/118068294/0c3951eb-defa-4cfc-a1ef-a4566b134bec)
+pos = lo + [(x-arr[lo])//(arr[hi]-arr[Lo])] *(hi-lo) }             
      
 
 There are many different interpolation methods and one such is known as linear interpolation. Linear interpolation takes two data points which we assume as (x1,y1) and (x2,y2) and the formula is :  at point(x,y).

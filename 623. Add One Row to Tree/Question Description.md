@@ -13,12 +13,16 @@ If depth == 1 that means there is no depth depth - 1 at all, then create a tree 
  
 
 Example 1:
+
+
 ![image](https://github.com/Adityaraj05/LeetCode/assets/118068294/2b830d46-1180-43d4-a144-5ee6d96f67ed)
 
 
 Input: root = [4,2,6,3,1,5], val = 1, depth = 2
 Output: [4,1,1,2,null,null,6,3,1,5]
+
 Example 2:
+
 
 ![image](https://github.com/Adityaraj05/LeetCode/assets/118068294/e9ac0d33-5691-46cb-8979-8640300bf2c0)
 

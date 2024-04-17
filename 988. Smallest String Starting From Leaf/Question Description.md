@@ -20,6 +20,8 @@ Example 1:
 
 Input: root = [0,1,2,3,4,3,4]
 Output: "dba"
+
+
 Example 2:
 
 
@@ -29,6 +31,8 @@ Example 2:
 
 Input: root = [25,1,3,1,3,0,2]
 Output: "adz"
+
+
 Example 3:
 
 

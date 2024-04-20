@@ -12,7 +12,8 @@ Return a 2D array containing the 4-length arrays described above for each group 
 Example 1:
 
 
-![image](https://github.com/Adityaraj05/LeetCode/assets/118068294/1e122f5d-dbaa-4ec7-b28b-c2bdcad164cc)
+![image](https://github.com/Adityaraj05/LeetCode/assets/118068294/a9cb29b3-e925-4ed3-ab6d-660b40c132f2)
+
 
 
 Input: land = [[1,0,0],[0,1,1],[0,1,1]]

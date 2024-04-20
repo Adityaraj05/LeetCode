@@ -16,7 +16,8 @@ Return a 2D array containing the 4-length arrays described above for each group 
 
 Example 1:
 
-![screenshot-2021-07-27-at-12-23-15-copy-of-diagram-drawio-diagrams-net](https://github.com/AnkitPorwal04/LeetCode/assets/96345105/df38300d-285a-4e02-96d0-2e5fc921229b)
+![screenshot-2021-07-27-at-12-23-15-copy-of-diagram-drawio-diagrams-net]
+(https://github.com/AnkitPorwal04/LeetCode/assets/96345105/df38300d-285a-4e02-96d0-2e5fc921229b)
 
 Input: land = [[1,0,0],[0,1,1],[0,1,1]]
 
@@ -29,7 +30,8 @@ The second group has a top left corner at land[1][1] and a bottom right corner a
 
 Example 2:
 
-![screenshot-2021-07-27-at-12-30-26-copy-of-diagram-drawio-diagrams-net](https://github.com/AnkitPorwal04/LeetCode/assets/96345105/0ba49d51-654f-446a-b945-076c8ac685be)
+![screenshot-2021-07-27-at-12-30-26-copy-of-diagram-drawio-diagrams-net]
+(https://github.com/AnkitPorwal04/LeetCode/assets/96345105/0ba49d51-654f-446a-b945-076c8ac685be)
 
 Input: land = [[1,1],[1,1]]
 
@@ -40,7 +42,8 @@ The first group has a top left corner at land[0][0] and a bottom right corner at
 
 Example 3:
 
-![screenshot-2021-07-27-at-12-32-24-copy-of-diagram-drawio-diagrams-net](https://github.com/AnkitPorwal04/LeetCode/assets/96345105/74d289e5-ddea-4e9e-92b9-fe340ec39caa)
+![screenshot-2021-07-27-at-12-32-24-copy-of-diagram-drawio-diagrams-net]
+(https://github.com/AnkitPorwal04/LeetCode/assets/96345105/74d289e5-ddea-4e9e-92b9-fe340ec39caa)
 
 Input: land = [[0]]
 

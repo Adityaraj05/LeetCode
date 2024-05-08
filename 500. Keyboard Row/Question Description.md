@@ -1,16 +1,32 @@
 500. Keyboard Row
-class Solution:
-    def findWords(self, words: List[str]) -> List[str]:
-        row1="qwertyuiop"
-        row2="asdfghjkl"
-        row3="zxcvbnm"
-        result = []
-        for word in words:
-            # converting all word into lower case so that we can store the word in set and compare the lenght of the word with lenght of the rows
-            w = word.lower()
-            # here we are comparing the lenght of the word with each row's if match the add into into the list 
-            if len(set(row1+w))==len(row1) or len(set(row2+w))==len(row2) or len(set(row3+w))==len(row3):
-                # printing word beacuse we are returing the word string with captial letter 
-                result.append(word)
-        return result
-        
+
+Given an array of strings words, return the words that can be typed using letters of the alphabet on only one row of American keyboard like the image below.
+
+In the American keyboard:
+
+the first row consists of the characters "qwertyuiop",
+the second row consists of the characters "asdfghjkl", and
+the third row consists of the characters "zxcvbnm".
+
+ ![image](https://github.com/Adityaraj05/LeetCode/assets/118068294/fee66907-bd4e-4926-a39a-a9584c03832f)
+
+
+Example 1:
+
+Input: words = ["Hello","Alaska","Dad","Peace"]
+Output: ["Alaska","Dad"]
+Example 2:
+
+Input: words = ["omk"]
+Output: []
+Example 3:
+
+Input: words = ["adsdf","sfd"]
+Output: ["adsdf","sfd"]
+ 
+
+Constraints:
+
+1 <= words.length <= 20
+1 <= words[i].length <= 100
+words[i] consists of English letters (both lowercase and uppercase). 

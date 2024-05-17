@@ -4,7 +4,7 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-# I have use here post order traversal in this problem to solve.
+
 class Solution:
     def removeLeafNodes(self, root: Optional[TreeNode], target: int) -> Optional[TreeNode]:
         # checks if the current node is None. If it is, it means we've reached the end of the tree or a leaf node, so the function returns without doing anything.

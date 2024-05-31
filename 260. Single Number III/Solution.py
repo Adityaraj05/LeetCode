@@ -1,12 +1,12 @@
-# using hashmap
+# using hashset
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> List[int]:
-        Hashmap = set()
+        Hashset = set()
         for num in nums:
-            if num not in Hashmap:
-                Hashmap.add(num)
+            if num not in Hashset:
+                Hashset.add(num)
             else:
-                Hashmap.remove(num)
-        return list(Hashmap)
+                Hashset.remove(num)
+        return list(Hashset)
         

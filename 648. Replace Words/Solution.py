@@ -1,29 +1,35 @@
-In English, we have a concept called root, which can be followed by some other word to form another longer word - let's call this word derivative. For example, when the root "help" is followed by the word "ful", we can form a derivative "helpful".
+class Solution(object):
+    def replaceWords(self, dictionary, sentence):
+        """
+        :type dictionary: List[str]
+        :type sentence: str
+        :rtype: str
+        """
 
-Given a dictionary consisting of many roots and a sentence consisting of words separated by spaces, replace all the derivatives in the sentence with the root forming it. If a derivative can be replaced by more than one root, replace it with the root that has the shortest length.
-
-Return the sentence after the replacement.
-
- 
-
-Example 1:
-
-Input: dictionary = ["cat","bat","rat"], sentence = "the cattle was rattled by the battery"
-Output: "the cat was rat by the bat"
-Example 2:
-
-Input: dictionary = ["a","b","c"], sentence = "aadsfasf absbs bbab cadsfafs"
-Output: "a a b c"
- 
-
-Constraints:
-
-1 <= dictionary.length <= 1000
-1 <= dictionary[i].length <= 100
-dictionary[i] consists of only lower-case letters.
-1 <= sentence.length <= 106
-sentence consists of only lower-case letters and spaces.
-The number of words in sentence is in the range [1, 1000]
-The length of each word in sentence is in the range [1, 1000]
-Every two consecutive words in sentence will be separated by exactly one space.
-sentence does not have leading or trailing spaces.
+        # Convert the list dictionary into a set s. Sets provide O(1) average-time complexity for membership tests, making it faster to check if a prefix exists in the dictionary.
+        s = set(dictionary)
+        # split() divides the sentence at each space, resulting in a list of words.
+        words = sentence.split()  #["the", "cattle", "was", "rattled", "by", "the", "battery"].
+        ans = []
+        
+        # : Iterate over each word in the list words.
+        for word in words:
+            # temp as an empty string to build prefixes and found as a boolean flag to indicate if a prefix is found.
+            temp = ""
+            found = False
+            #  Iterate over each character in the current word.This nested loop builds prefixes one character at a time.
+            for char in word:
+                # Append the current character char to temp, gradually building the prefix. Example: If word is "cattle", temp becomes "c", then "ca", and so on.
+                temp += char
+                # Check if the current temp (prefix) exists in the set s (dictionary)
+                if temp in s:
+                    #  If temp is found in the set s, Append temp to the ans list. Set the found flag to True.Break out of the inner loop as the shortest prefix is found.
+                    ans.append(temp)
+                    found = True
+                    break
+            #  if no prefix was found (found is False
+            if not found:
+                # Append the original word to the ans list.
+                ans.append(word)
+        # Join the list ans into a single string with spaces between the words and return it. join() combines all elements in ans into a single string with spaces separating each element.
+        return ' '.join(ans)

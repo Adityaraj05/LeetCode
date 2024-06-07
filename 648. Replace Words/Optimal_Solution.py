@@ -1,3 +1,17 @@
+# we can leverage the Trie (prefix tree) data structure. A Trie allows us to efficiently store the dictionary and perform prefix searches. Here's how you can use a Trie to solve this problem:
+
+# Build a Trie: Insert all the dictionary words into the Trie.
+# Search for Prefixes: For each word in the sentence, search for the shortest prefix in the Trie.
+# This approach ensures efficient prefix search, leading to an optimal solution.
+
+# Why This Approach is Optimal:
+# 1. Efficient Insertions and Searches: Building and querying the Trie are both efficient operations, making this approach suitable for large dictionaries and sentences.
+# 2. Minimal Prefix Checks: The Trie structure ensures that we stop as soon as we find the shortest prefix, avoiding unnecessary checks.
+# 3 .Clean and Readable Code: The separation of Trie construction and word replacement logic makes the code easier to understand and maintain.
+
+
+
+
 class TrieNode:
     def __init__(self):
         self.children = {}

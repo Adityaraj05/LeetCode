@@ -9,10 +9,10 @@ class Solution(object):
         """
      
         n = len(profits)
-        l = [(capital[i], profits[i]) for i in range(n)] #[(0, 1), (1, 2), (2, 3)]
+        l = [(capital[i], profits[i]) for i in range(n)] #[(0, 1), (1, 2), (1, 3)]
         
         # Sort based on capital by default it will sort based on first index (here on basis of capital)
-        l.sort()  #[(0, 1), (1, 2), (2, 3)]
+        l.sort()  #[(0, 1), (1, 2), (1, 3)]
         
         i = 0
         # Priority queue  (max-heap)
@@ -26,15 +26,15 @@ class Solution(object):
                 # In Python, the heapq module implements a min-heap by default, meaning that the smallest element is always at the top of the heap. However, in this problem, we need a max-heap to always retrieve the project with the highest profit that we can afford.To simulate a max-heap using the min-heap functionality provided by heapq, we can insert negative values into the heap. This way, the most negative value (which corresponds to the largest positive value) will be at the top of the heap.
 
                 # Use negative profits for max heap behavior
-                heapq.heappush(pq, -l[i][1])  #pq=[-1] 
-                i += 1 # i =1
+                heapq.heappush(pq, -l[i][1])  #pq=[-1]; #pq=[-3,-2]
+                i += 1 # i =1 ; i = 2 ; i = 3
             
             if not pq:
                 break
             
-            # Pop the max profit (convert back to positive)
-            w += -heapq.heappop(pq) # w +=1 =>1 
-            k -= 1 # 2-1= 1
+            # Pop the max profit (convert back to positive) top most value of heapq pq = -1 , pq = -3
+            w += -heapq.heappop(pq) # w +=1 =>1 ; w +=3 => 4
+            k -= 1 # 2-1= 1; k = 0
         
         return w
             

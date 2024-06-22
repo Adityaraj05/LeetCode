@@ -2,6 +2,7 @@ class Solution:
     def numberOfSubarrays(self, nums: List[int], k: int) -> int:
         ans = 0
         prefixSum = 0
+         # Initialize a counter to keep track of prefix sums encountered, starting with 0:1, meaning that at the beginning, we've encountered a prefix sum of 0 once.
         count = collections.Counter({0: 1})
         for i in range(len(nums)):
             # Update the prefixSum by adding 1 if the current element nums[i] is odd (nums[i] % 2 == 1), otherwise add 0. This keeps track of the number of odd elements encountered so far.

@@ -3,6 +3,8 @@ class Solution:
 
         n = len(nums)
         # initialize two empty lists to be used as heaps. max_heap will store the negative values to simulate a max-heap, and min_heap will store the values as they are for a min-heap.
+        # Note: -In Python, the heapq module provides a min-heap by default, which means the smallest element is always at the root of the heap. However, 
+        # in this algorithm, we need both a min-heap and a max-heap to efficiently find the minimum and maximum values within the current window of the array.
         max_heap = []
         min_heap = []
         
